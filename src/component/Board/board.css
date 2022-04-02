@@ -1,0 +1,174 @@
+@import "https://fonts.googleapis.com/css?family=Do+Hyeon";
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clear-fix:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.img-responsive {
+  max-width: 100%;
+  filter: saturate(100%);
+  height: 100%;
+  transition: all 0.5s ease;
+  object-fit: cover;
+}
+.card__collection {
+  position: relative;
+  display: block;
+  padding: 10px;
+  font-family: "Do Hyeon", sans-serif;
+  overflow: hidden;
+}
+.card__collection .cards {
+  width: 250px;
+  height: 350px;
+  display: block;
+  background-size: cover;
+  float: left;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  background-position: center;
+  margin: 2rem;
+}
+
+.card__collection .cards--two {
+  position: relative;
+  backface-visibility: hidden;
+}
+.card__collection .cards--two p {
+  position: absolute;
+  top: 20%;
+  left: -100%;
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 20px;
+  z-index: 8;
+  transition: all 0.6s ease;
+}
+.card__collection .cards--two:hover p {
+  left: 8%;
+}
+.card__collection .cards--two:hover img {
+  transform: translateY(-15px);
+  filter: brightness(50%);
+}
+.card__collection .cards--two:hover .cards--two__rect {
+  top: 75%;
+}
+.card__collection .cards--two:hover .cards--two__rect:before {
+  transform: translateY(15px);
+}
+.card__collection .cards--two:hover li {
+  transform: translateY(0);
+}
+.card__collection .cards--two:hover .cards--two__tri {
+  right: -30%;
+}
+.card__collection .cards--two:hover .cards--two__tri:before {
+  right: -300px;
+}
+.card__collection .cards--two img {
+  transition: all 0.2s ease;
+}
+.card__collection .cards--two__tri {
+  border-top: 220px solid transparent;
+  border-bottom: 190px solid transparent;
+  border-right: 260px solid #fff;
+  opacity: 0.9;
+  position: absolute;
+  display: block;
+  top: 0;
+  right: -100%;
+  transition: all 0.3s ease-in-out;
+}
+.card__collection .cards--two__tri:before {
+  border-top: 220px solid transparent;
+  border-bottom: 190px solid transparent;
+  border-right: 288px solid #57ccfd;
+  position: absolute;
+  content: "";
+  display: block;
+  top: -220px;
+  right: -612px;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.2s;
+}
+.card__collection .cards--two__rect {
+  width: 750px;
+  height: 160px;
+  background: #fff;
+  display: block;
+  position: absolute;
+  top: 175%;
+  left: -78%;
+  transform: rotate(30deg);
+  z-index: 5;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.card__collection .cards--two__rect:before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  background: #f07306;
+  transform: translateY(200px);
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.1s;
+}
+.card__collection .cards--two ul {
+  list-style: none;
+  position: absolute;
+  bottom: 40%;
+  right: 10px;
+  z-index: 9;
+}
+.card__collection .cards--two ul li {
+  display: inline-block;
+  font-size: 16px;
+  margin: 7px;
+  color: blue;
+  list-style: none;
+  transition: all 0.2s ease-in-out;
+  transform: translateY(200px);
+}
+.card__collection .cards--two .msg {
+  position: absolute;
+  padding: 20px;
+  bottom: -50%;
+  color: white;
+  z-index: 10;
+  font-weight: 700;
+  left: 0px;
+  font-size: 13px;
+  width: 70%;
+  display: block;
+  text-align: left;
+  transition: 0.3s ease-in-out all;
+}
+
+.position{
+  margin-top:30px ;
+  font-weight: 600;
+}
+.card__collection .cards--two:hover .msg {
+  bottom: 0;
+}
+.card__collection .cards--two ul li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.card__collection .cards--two ul li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.card__collection .cards--two ul li:nth-child(4) {
+  transition-delay: 0.4s;
+}

@@ -1,0 +1,11 @@
+export { default as Dropdown } from '../component/Dropdown';
+export { default as Hero } from '../component/Hero';
+export { default as AboutSection } from '../component/AboutSection';
+export { default as Navbar } from '../component/Navbar';
+export { About } from '../data/InfoData';
+export { SliderData } from '../data/SliderData';
+export { default as GlobalStyle } from '../globalStyle';
+export { default as EventSection } from '../component/EventSection';
+export { Events } from '../data/Eventdata';
+export { default as BoardSection } from '../component/BoardSection';
+export { BoardFaculty } from '../data/Board';
