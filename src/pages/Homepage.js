@@ -19,6 +19,11 @@ display:flex;
 flex-direction:column;
 justify-content:center;
  align-items:center;
+ @media  screen and (max-width:500px){
+       font-size:20px;
+       text-align:center;
+       background-color:#19338F
+   }
 `;
 
 const IEEEname = styled.div`
@@ -36,6 +41,7 @@ const IEEEname = styled.div`
     @media  screen and (max-width:500px){
        font-size:20px;
        text-align:center;
+       
    }
 `;
 
@@ -55,6 +61,7 @@ const AboutIEEE = styled.div`
        width:80%;
        padding:0px;
        margin:0px;
+
        align-items:center;
    }
 
@@ -112,12 +119,12 @@ const AboutContent = styled.div`
     @media  screen and (max-width:500px){
        font-size:12px;
        line-height:15px;
-       width:70%;
+       width:80%;
        padding:0;
        height:50%;
        color:white;
        background-color:transparent;
-       text-align:center;
+       text-align:justify;
 
        }
 `;

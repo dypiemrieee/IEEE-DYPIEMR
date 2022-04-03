@@ -14,9 +14,11 @@ const HeroSection = styled.section`
     padding:3rem 2rem;
     justify-content:center;
     @media screen and (max-width:500px){
+        
         height:100%;
         width:100%;
-    }
+        padding:1rem 0.5rem;
+}
 
   
 `
@@ -27,7 +29,6 @@ const HeroImage = styled.div`
   width:100vw;
   height:100vh;
   max-width:100%;
-  ${'' /* object-fit:cover; */}
   filter: brightness(80%);
    
   .herovid{
@@ -37,8 +38,16 @@ const HeroImage = styled.div`
       object-fit:cover;
   }
   @media screen and (max-width:500px){
+      color:#000;
       width:100%;
-      height:100%
+      height:100%;
+      position:absolute;
+      .herovid{
+
+width:100%;
+height:100%;
+object-fit:cover;
+}
   }
 `;
 const HeroContent = styled.div`
@@ -114,7 +123,7 @@ const Hero = ({ slides }) => {
 
 
             <HeroImage >
-                    <video src={hero_video} autoPlay loop muted className='herovid'/>
+                <video src={hero_video} autoPlay loop muted className='herovid' />
 
             </HeroImage>
 
@@ -132,7 +141,7 @@ const Hero = ({ slides }) => {
                             strings: [
                                 'Advancing the Technologies',
                                 'Innovation is in our Core',
-                                
+
                             ],
 
                         }}

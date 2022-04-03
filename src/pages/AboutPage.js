@@ -4,11 +4,11 @@ import { About } from '../data/InfoData';
 import styled from 'styled-components';
 import HashLoader from "react-spinners/HashLoader";
 import IEEElogo from '../images/aboutsection/IEEE DYPIEMR LOGO.png';
-
+import '../component/about/facultyinfo.css'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import Faculty from '../component/about/Faculty';
 import { BoardFaculty } from '../data/Board';
+import Facultyinfo from '../component/about/Facultyinfo';
 
 const LoadingScreen = styled.div`
   
@@ -96,6 +96,9 @@ const AboutContent = styled.div`
 const AboutSectionMain = styled.div`
  height:100%;
  width:100vw;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
  .aboutheading{
      margin-top:2rem;
      font-size:2.5rem;
@@ -147,7 +150,7 @@ const AboutPage = () => {
                         color: '#19FC30',
                         height: '100vh',
                         width: '100vw',
-                        backgroundColor: "#000"
+                        backgroundColor: "#000",
 
                     }}>
                         <h2 data-aos='fade-up'
@@ -173,7 +176,9 @@ const AboutPage = () => {
                     </AboutIEEE>
 
                     <AboutSection  {...About} />
-                    <Faculty faculty={BoardFaculty} />
+                    <h1 className='facultyhead'>Message from Faculty</h1>
+
+                    <Facultyinfo faculty={BoardFaculty} />
                 </AboutSectionMain>
         }
     </>;

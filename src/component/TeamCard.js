@@ -71,14 +71,15 @@ const CardImg = styled.div`
    width:120px;
    height:120px;
    img{
-       height:80%;
+       height:100%;
        width:100%;
        border-radius:50%;
        object-fit:cover;
    }
    @media screen and (max-width:450px){
     width:50%;
-    height:50%;
+    min-height:50%;
+
     padding:0;
     img{
         border-radius:25px;

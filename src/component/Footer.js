@@ -12,7 +12,7 @@ const FooterPart = styled.div`
    padding:2rem 3rem;
    background-color:#000;
    color:white;
-   width:100vw;
+   width:100%;
    height:100%;
    position:relative;
    display:flex;
@@ -26,6 +26,7 @@ const FooterPart = styled.div`
    @media  screen and (max-width:500px){
        padding:2rem 1rem;
        .foot{
+           align-items:space-around;
            flex-direction:column;
        }
    }
