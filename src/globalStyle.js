@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     font-family:'Montserrat',sans-serif;
     html,body{
         overflow-x:hidden;
+        scrollbar-width:;
     }
 }
 
