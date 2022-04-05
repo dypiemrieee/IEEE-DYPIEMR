@@ -2,7 +2,15 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    color: #2C2C2C;
+}
 
+::-webkit-scrollbar-thumb {
+    background-color: #2C2C2C;
+}
 
 
 
