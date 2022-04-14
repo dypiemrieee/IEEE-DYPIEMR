@@ -33,7 +33,7 @@ const AboutIEEE = styled.div`
     display:flex;
     flex-direction:row;
     @media screen and (max-width:500px){
-        width:80%;
+        width:50%;
         flex-direction:column;
         justify-content:center;
         align-items:center;
@@ -61,12 +61,13 @@ const LogoIEEE = styled.div`
   }
   @media screen and (max-width:500px){
       width:100%;
-      height:100%;
+      ${'' /* height:100%; */}
+      padding:0;
+
       background-color:transparent;
       img{
-          padding:0;
-        width:90%;
-        object-fit:contain;
+        width:100%;
+        object-fit:cover;
       }
   }
   
@@ -89,9 +90,11 @@ const AboutContent = styled.div`
     font-size: 18px;
     @media screen and (max-width:500px){
         margin-left:0;
-        font-size:10px;
-        width:80%;
-        padding:1rem;
+        background-color:transparent;
+        color:black;
+        font-size:12px;
+        width:90%;
+        padding:0.5rem;
         text-align:center;
     }
 `;
@@ -102,6 +105,7 @@ const AboutSectionMain = styled.div`
  display:flex;
  flex-direction:column;
  align-items:center;
+ justify-content:center;
  .aboutblock{
      @media{
             height:100vh;

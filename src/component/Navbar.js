@@ -17,7 +17,8 @@ const Nav = styled.nav`
    color:white;
 
    @media screen and (max-width:500px){
-        padding:0.5rem 10px;
+        padding:0;
+        padding-right:3rem;
    }
   
 `;
