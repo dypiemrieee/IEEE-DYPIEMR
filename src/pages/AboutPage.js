@@ -33,13 +33,13 @@ const AboutIEEE = styled.div`
     display:flex;
     flex-direction:row;
     @media screen and (max-width:500px){
+        width:80%;
         flex-direction:column;
         justify-content:center;
         align-items:center;
-        padding:0;
         margin:0;
-        width:80%;
-        
+        padding:0;
+
     }
 
 
@@ -47,7 +47,7 @@ const AboutIEEE = styled.div`
 const LogoIEEE = styled.div`
   background-color:#000;
   display:flex;
-  width:30vw;
+  width:50%;
   height:100%;
   padding:3rem;
 
@@ -62,10 +62,11 @@ const LogoIEEE = styled.div`
   @media screen and (max-width:500px){
       width:100%;
       height:100%;
-      padding:1rem;
       background-color:transparent;
       img{
-        width:90%
+          padding:0;
+        width:90%;
+        object-fit:contain;
       }
   }
   
@@ -87,9 +88,11 @@ const AboutContent = styled.div`
     font-weight: 500;
     font-size: 18px;
     @media screen and (max-width:500px){
+        margin-left:0;
         font-size:10px;
         width:80%;
         padding:1rem;
+        text-align:center;
     }
 `;
 
@@ -99,6 +102,12 @@ const AboutSectionMain = styled.div`
  display:flex;
  flex-direction:column;
  align-items:center;
+ .aboutblock{
+     @media{
+            height:100vh;
+            width:100%;
+     }
+ }
  .aboutheading{
      margin-top:2rem;
      font-size:2.5rem;
@@ -114,12 +123,13 @@ const AboutSectionMain = styled.div`
          font-size:2rem;
      }
  }
- @media screen and  (max-width:450px){
+ @media screen and (max-width:450px){
      width:100%;
      display:flex;
      flex-direction:column;
      justify-content:center;
-     align-items:center
+     align-items:center;
+
  }
  
 `
@@ -144,15 +154,16 @@ const AboutPage = () => {
                     size={150} />
             </LoadingScreen> :
                 <AboutSectionMain>
-                    <div style={{
-                        position: 'relative',
-                        top: "0",
-                        color: '#19FC30',
-                        height: '100vh',
-                        width: '100vw',
-                        backgroundColor: "#000",
+                    <div
+                        className='aboutblock' style={{
+                            position: 'relative',
+                            top: "0",
+                            color: '#19FC30',
+                            height: '100vh',
+                            width: '100vw',
+                            backgroundColor: "#000",
 
-                    }}>
+                        }}>
                         <h2 data-aos='fade-up'
                             className='entertext'
                             style={{

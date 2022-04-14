@@ -15,6 +15,10 @@ const Nav = styled.nav`
    width : 100%;
    background-color:#000;
    color:white;
+
+   @media screen and (max-width:500px){
+        padding:0.5rem 10px;
+   }
   
 `;
 
@@ -52,7 +56,7 @@ display:none;
     display:flex;
     align-self:center;
     justify-self:center;
-
+    margin-right:10px;
     &:after{
         content :'Menu';
         color:white;
