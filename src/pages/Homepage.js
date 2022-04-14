@@ -19,10 +19,11 @@ display:flex;
 flex-direction:column;
 justify-content:center;
  align-items:center;
- @media  screen and (max-width:500px){
+ @media  screen and (max-width:768px){
        font-size:20px;
        text-align:center;
-       background-color:#19338F
+       background-color:#19338F;
+       width:100%;
    }
 `;
 
@@ -38,7 +39,7 @@ const IEEEname = styled.div`
     @media screen and (max-width:1200px){
         font-size:35px;
     }
-    @media  screen and (max-width:500px){
+    @media  screen and (max-width:768px){
        font-size:20px;
        text-align:center;
        
@@ -53,14 +54,15 @@ const AboutIEEE = styled.div`
     padding:3rem 6rem;
     display:flex;
     flex-direction:row;
+    justify-content:center;
+    align-items:center;
 
-
-    @media  screen and (max-width:500px){
+    @media  screen and (max-width:768px){
        flex-direction:column;
        height:100%;
        width:80%;
-       padding:0px;
-       margin:0px;
+       padding:0;
+       margin:0;
 
        align-items:center;
    }
@@ -76,7 +78,7 @@ const LogoIEEE = styled.div`
       background-color:#000;
 
   }
-  @media  screen and (max-width:500px){
+  @media  screen and (max-width:768px){
       margin:1rem;
       background-color:transparent;
 
@@ -116,16 +118,18 @@ const AboutContent = styled.div`
        text-align:justify;
     }
 
-    @media  screen and (max-width:500px){
+    @media  screen and (max-width:768px){
        font-size:12px;
        line-height:15px;
-       width:80%;
+       width:60%;
        padding:0;
        height:50%;
        color:white;
        background-color:transparent;
        text-align:justify;
-
+      p{
+            width:100%;
+      }
        }
 `;
 
@@ -152,12 +156,13 @@ const ReadMore = styled(Link)`
   align-items:center;
   justify-content:flex-start;
   text-decoration : none;
-  @media screen and (max-width:500px){
+  @media screen and (max-width:768px){
       width:50%;
       padding:0;
-
+      color:#fff;
       .arrow{
           font-size:15px;
+          color:#fff;
       }
   }
 

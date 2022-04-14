@@ -8,13 +8,14 @@ import {Link} from 'react-router-dom';
 const DropdownContainer = styled.div`
     position:fixed;
     z-index:${({ isOpen }) => (isOpen ? '999' : -10)};
-    width:100%;
-    height:100%;
-    background:#000;
+    width:50%;
+    height:50%;
+    padding:1rem;
+    background:#19338F;
     display:grid;
     align-items:center;
-    top:0;
-    left:0;
+    top:-10%;
+    right:0;
     transition:0.3s ease-in-out;
     opacity:${({ isOpen }) => (isOpen ? ' 1' : '0')};
     top:${({ isOpen }) => (isOpen ? ' 0' : '-100')};
@@ -24,7 +25,7 @@ const DropdownContainer = styled.div`
 
 const Icon = styled.div`
     position:absolute;
-    top:1.2rem;
+    top:2rem;
     right:1.5rem;
     ${'' /* background:white; */}
     font-size:2rem;
@@ -34,9 +35,10 @@ const Icon = styled.div`
 `;
 const CloseIcon = styled(FaTimes)`
     color:#fff;
+    font-size:1.5rem;
 `;
 const DropdownWrapper = styled.div`
-    
+    margin-top:4rem;
 `;
 const DropdownMenu = styled.div`
     display:grid;
@@ -55,7 +57,7 @@ const DropdownLink = styled(Link)`
     color:#fff;
     align-items:center;
     justify-content:center;
-    font-size:1.5rem;
+    font-size:1rem;
     margin: 1rem 0;
     text-decoration:none;
     list-style:none;
