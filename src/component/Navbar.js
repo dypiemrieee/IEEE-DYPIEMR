@@ -61,7 +61,7 @@ const CloseIcon = styled(FaTimes)`
     display:flex;
     align-self:center;
     justify-self:center;
-    margin-right:10px;
+    margin-right:20px;
     &:after{
         content :'Menu';
         color:white;
@@ -77,7 +77,7 @@ display:none;
     display:flex;
     align-self:center;
     justify-self:center;
-    margin-right:10px;
+    margin-right:20px;
     &:after{
         content :'Menu';
         color:white;
