@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Navbar, GlobalStyle, } from './component/paths';
 import { Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
