@@ -18,7 +18,7 @@ margin:1rem 0;
   padding-left: 10px;
   outline: none;
   height:40px;
-  width: 60vh;
+  width: 100%;
   background-color:#DCDCDD;
   border: 3px solid white;
   transition:all 0.4s ease-in-out ;
@@ -34,7 +34,7 @@ margin:1rem 0;
   display: block;
   outline: none;
   height:100%;
-  width: 60vh;
+  width: 100%;
   background-color:#DCDCDD;
   border: 3px solid white;
   transition:all 0.4s ease-in-out ;
@@ -56,7 +56,7 @@ margin:1rem 0;
     }
     textarea{
         padding:10px;
-        width:80%;
+        width:100%;
         height:20%
     }
   }

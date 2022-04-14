@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled, { css } from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 import { Menudata } from '../data/Menudata';
 import { FaBars } from 'react-icons/fa'
 import Ieeelogonav from '../images/herosection/IEEElogonav.png'
+import Dropdown from './Dropdown';
+import { FaTimes } from 'react-icons/fa';
 
+import './eventTimeline.css'
 const Nav = styled.nav`
    height : 80px;
    display: flex;
@@ -22,6 +25,7 @@ const Nav = styled.nav`
    }
   
 `;
+
 
 
 const NavLink = css`
@@ -50,6 +54,22 @@ const Logo = styled(Link)`
       
     `;
 
+
+const CloseIcon = styled(FaTimes)`
+    display:none;
+@media screen and (max-width : 768px){
+    display:flex;
+    align-self:center;
+    justify-self:center;
+    margin-right:10px;
+    &:after{
+        content :'Menu';
+        color:white;
+    }
+
+    
+}
+`;
 
 const MenuBars = styled(FaBars)`
 display:none;
@@ -97,19 +117,29 @@ const NavMenuLinks = styled(Link)`
 
 
 
-const Navbar = ({ toggle }) => {
+const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
 
-
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    }
 
 
 
     return (
-        <header>
+        <header className='navhead'>
             <Nav>
                 <Logo to='/' >
                     <img src={Ieeelogonav} alt='logo' />
                 </Logo>
-                <MenuBars onClick={toggle} textAnchor="Menu"/>
+                {
+                    isOpen ?
+                        <CloseIcon onClick={toggle} />
+                        :
+                        <MenuBars onClick={toggle} />
+                }
+                {/* <MenuBars onClick={toggle} textAnchor="Menu" /> */}
+
                 <NavMenu>
                     {
                         Menudata.map((item, index) => (
@@ -119,7 +149,12 @@ const Navbar = ({ toggle }) => {
                         ))
                     }
                 </NavMenu>
+                <div style={{ position: 'absolute', top: '250px' }}>
+                    <Dropdown isOpen={isOpen} toggle={toggle} />
+                </div>
+
             </Nav>
+
 
         </header>
 

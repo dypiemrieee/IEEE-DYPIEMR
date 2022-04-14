@@ -14,15 +14,17 @@ const ContactSection = styled.section`
   padding:2rem;
   height:100%;
   width:100%;
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 10px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+    align-items:center;
   border-radius:15px;
 
-@media(max-width:450px){
-    grid-template-columns: 1fr;
+@media(max-width:800px){
+    flex-direction:column;
     padding:10px;
+    justify-content:center;
+    align-items:center;
 }
   `;
 const SocialMediaHandles = styled.div`
@@ -68,11 +70,12 @@ const SocialMediaHandles = styled.div`
 `;
 const ContactForm = styled.div`
   height:100%;
-  padding:2rem 4rem;
-  @media(max-width:450px){
+  width:60%;
+  padding:3rem;
+  @media(max-width:800px){
     margin-top:1rem;
     height:100%;
-    width:80%;
+    width:100%;
     padding:10px
   }
 `;
@@ -86,13 +89,19 @@ const FormContent = styled.div`
    display:flex;
    justify-content:space-around;
    align-items:center;
-    
+  ${'' /* padding:1rem; */}
+
+  .form{
+      width:80%;
+      height:90%;
+      padding:10px;
+  }
     .Submit_Button{
         padding:0.5rem;
         margin:0.5rem;
         background-color:#86C6F4;
         height:15%;
-        width:40%;
+        width:50%;
         border-radius:15px;
         border:none;
         outline:none;
@@ -108,8 +117,12 @@ const FormContent = styled.div`
     height:100%;
     width:100%;
     padding:10px;
+    .form{
+        width:100%;
+        height:100%;
+    }
     .Submit_Button{
-        width:50%
+        width:80%
     }
   }
 `;
@@ -125,6 +138,7 @@ const SocialAddress = styled.div`
    font-size:25px;
    transition:all 0.3s linear;
    cursor:pointer;
+   text-align:center;
    a{
     text-decoration:none;
     color:white;
@@ -154,6 +168,9 @@ const SocialAddress = styled.div`
          height:50%;
          a{
             width:100%;
+         }
+         .thumb{
+             display:none;
          }
    }
 `;
@@ -281,7 +298,7 @@ const Contact = () => {
                     </SocialMediaHandles>
                     <ContactForm>
                         <FormContent>
-                            <form onSubmit={handleSubmit}>
+                            <form className='form' onSubmit={handleSubmit}>
                                 <FormElement lname='Name' emogi='💻' inputT={false} />
                                 <FormElement lname='Email' emogi='✉️' inputT={false} />
                                 <FormElement lname='Message' emogi='📖' inputT={true} />

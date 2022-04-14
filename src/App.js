@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Dropdown, Navbar, GlobalStyle, } from './component/paths';
+import { Navbar, GlobalStyle, } from './component/paths';
 import { Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Footer from './component/Footer';
@@ -15,11 +15,8 @@ import GalleryPage from './pages/GalleryPage';
 
 const App = () => {
 
-    const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => {
-        setIsOpen(!isOpen);
-    }
+    
 
 
 
@@ -29,8 +26,7 @@ const App = () => {
     return (
         <>
             <GlobalStyle />
-            <Navbar toggle={toggle} />
-            <Dropdown isOpen={isOpen} toggle={toggle} />
+            <Navbar  />
 
             <Routes>
                 <Route path="/" element={<Homepage />} />
