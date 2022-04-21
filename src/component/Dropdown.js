@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const DropdownContainer = styled.div`
     position:fixed;
-    z-index:${({ isOpen }) => (isOpen ? '999' : -10)};
+    z-index:${({ isOpen }) => (isOpen ? 999 : -10)};
     width:50%;
     height:60%;
     padding:1rem;
