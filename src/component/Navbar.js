@@ -19,9 +19,20 @@ const Nav = styled.nav`
    background-color:#000;
    color:white;
 
+  .dropDownMenu{
+    display:none;
+  }
    @media screen and (max-width:500px){
         padding:0;
         padding-right:1px;
+        
+   }
+   @media screen and (max-width:768px){
+    .dropDownMenu{
+            display:block;
+    position: absolute;
+     top: 250px;
+  }
    }
   
 `;
@@ -149,7 +160,7 @@ const Navbar = () => {
                         ))
                     }
                 </NavMenu>
-                <div style={{ position: 'absolute', top: '250px' }}>
+                <div className='dropDownMenu' style={{}}>
                     <Dropdown isOpen={isOpen} toggle={toggle} />
                 </div>
 
